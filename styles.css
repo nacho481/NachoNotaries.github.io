@@ -29,7 +29,7 @@ body {
     padding: 0; 
     /* Convention to make padding 0 on body to reset the default value to 0
     since it wraps around the content on the page */
-    font-family: 'Caveat', cursive;
+    /* font-family: 'Caveat', cursive; */
     font-family: 'Merriweather Sans', sans-serif;
     font-family: 'Playfair Display', serif;
     font-size: 17px;
@@ -41,14 +41,17 @@ header {
     text-align: center;
 }
 
-img {width: 300px;}
-a {color: #007EA7;}
+img {
+    width: 300px;
+}
+a {
+    color: #007EA7;
+}
 a:hover {
     text-decoration: none;
 }
 
 .content-wrap {
-
     max-width: 1000px;
     width: 85%;
     max-height: 1000px;
@@ -70,7 +73,7 @@ h2{
 }
 
 h1, h2{
-    font-family: 'Caveat', cursive;
+    /* font-family: 'Caveat', cursive; */
     font-weight: 400; /* Removes the bold from the text */
     margin: 0;
 }
@@ -95,7 +98,9 @@ within the .item-details container  */
     background-color: #333;
 }
 
-.nav-list li {float: left;}
+.nav-list li {
+    float: left;
+}
 
 .nav-list li a {
     display: block;
@@ -137,7 +142,6 @@ within the .item-details container  */
 
 .home-block-1 h1 {
     font-size: 70px;
-    
 }
 
 .home-block-1 p {
