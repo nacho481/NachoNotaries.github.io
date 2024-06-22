@@ -1,0 +1,571 @@
+/* Colors 
+
+    Black Olive    #37392E
+    Blue Sapphire  #19647E
+    White          #FFFFFF
+    Dark Orange    #F58F29
+    Russian Violet #462255
+    Tiffany blue   #07BEB8
+
+*/
+
+
+
+/* Global Styles
+--------------------------------- */
+
+html{
+    box-sizing: border-box;
+    
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+    color: #003249;
+    margin: 0;  /* Gets rid of spacing on top */
+    padding: 0; 
+    /* Convention to make padding 0 on body to reset the default value to 0
+    since it wraps around the content on the page */
+    font-family: 'Caveat', cursive;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+header {
+    background: #9AD1D4;
+    text-align: center;
+}
+
+img {width: 300px;}
+a {color: #007EA7;}
+a:hover {
+    text-decoration: none;
+}
+
+.content-wrap {
+
+    max-width: 1000px;
+    width: 85%;
+    max-height: 1000px;
+    height: 50%;
+    margin: 0 auto; 
+    /* - 0 refers to top and bottom (no unit necessary)
+       - auto refers to LHS and RHS*/
+    padding: 60px 0; 
+}
+
+h1{
+    font-size: 70px;
+    line-height: 1; /* Override the inherited line-height of 1.5 */
+}
+
+h2{
+    font-size: 35px;
+    margin: 0;
+}
+
+h1, h2{
+    font-family: 'Caveat', cursive;
+    font-weight: 400; /* Removes the bold from the text */
+    margin: 0;
+}
+
+/* added before unique type selectors b/c this is more general  */
+
+h3 {
+    margin-bottom: 0; /* Remove space at the bottom */
+}
+
+/* Match to the 1st paragraph following an h3 that is nested
+within the .item-details container  */
+
+/* Header
+--------------------------------- */
+
+.nav-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-list li {float: left;}
+
+.nav-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-list li a:hover:not(.active) {
+    background-color: #111
+}
+.nav-list li a:hover:active {
+    background-color: #007EA7;
+}
+
+/* INDEX 
+--------------------------------- */
+
+    /* home page 
+    --------------------------------- */
+.home-block-1 {
+    /* background-color: #07BEB8; */
+    background-image: url(images/cityBackground2.jpg);
+    background-size: cover;
+    background-position: top right;
+    color: #ffffff;
+
+    /* makes it easier to read with the busy background */
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    /* color: black; */
+    text-align: center;
+    
+}
+
+.home-block-1 h1 {
+    font-size: 70px;
+    
+}
+
+.home-block-1 p {
+    padding-top: 10px;
+    color: white;
+}
+
+        /* home block 2
+        --------------------------------- */
+.home-block-2 {
+    background-color: #19647E;
+    overflow: hidden;
+}
+
+.home-block-2-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* add gutter */
+    column-gap: 40px;    
+    overflow: auto;
+}
+
+.home-block-2-wrap img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 200px
+    /* max-width: 30%; */
+    /* height: auto; */
+}
+
+.home-about-us, .home-our-services {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.home-about-title {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.home-about-us {
+    background: white;
+}
+
+/* refactor when adding image above */
+
+/*.home-about-us p:first-of-type, 
+.home-our-services p:first-of-type {
+    border-top: 1px;
+    border-bottom-color: black;
+    border-bottom-style:groove;
+    padding-bottom: 5px;
+}*/
+
+.home-our-services {
+    background: white;
+}
+
+        /* home block 2 END
+        --------------------------------- */
+
+.home-block-3 {
+    background-color: #FFFFFF;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 1 1 45%;
+    justify-content: center; 
+
+}
+
+.home-block-3 p {
+    padding-top: 10px;
+    font-size: 18px;
+    /* font-family: 'Caveat', cursive; */
+}
+
+
+/* END INDEX
+--------------------------------- */
+
+/* Need a Notary?
+--------------------------------- */
+
+.notary-service {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.needNotaryBackground {
+    background-image: url(images/paperwork.jpg);
+    background-size: cover;
+    background-position: top right;
+    width: 50px;
+    height: auto;
+}
+
+.card-notary-job {
+    width:45%;
+    border-style: solid;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    margin: 20px;
+    color: white;
+}
+
+.card-notary-job p {
+    color: white;
+    font-size: 20px;
+}
+
+#position ,#provideTime {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.notary-service-headings p {
+    font-size: 26px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.notary-service-headings p:last-of-type {
+    padding-bottom: 10px;
+}
+
+.content-table {
+    border-collapse: collapse;
+    border: 1px solid back;
+    /* margin: 25px 0; */
+    font-size: 0.9em;
+    min-width: 500px;
+    border-radius: 5px 5px 0 0;
+    /* overflow: hidden; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    
+    /* centering a table was a bit tricky, I also 
+    tried using .contet-wrap */
+    margin: auto auto;
+}
+/* Alice Blue: #DCEDFF */
+.content-table thead tr {
+    background-color: #505A5B;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+  
+/* adds a bottom-border  */
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+  s
+/* background color to every 2 rows */
+.content-table tbody tr:nth-of-type(odd) {
+    background-color: #343F3E;
+    font-weight: bold; 
+}
+  
+.content-table tbody tr:nth-of-type(even) {
+    /* background-color: #F6E3E1; */
+    /* color: white; */
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-weight: 600;
+}
+  /* DCCDCC */
+  
+/* specifc type to target very lsat border bottom */
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #343F3E;
+}
+  
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/*
+#provideTime {
+    width: 100%;
+    margin-top;
+}*/
+
+
+
+/* Need a Notary? END
+--------------------------------- */
+
+/* Join Our Network
+--------------------------------- */
+.join-network-image {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    padding-left: 7%;
+    padding-right: 0%;
+    background-image: url(images/joinNetwork5.jpg);
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: 30%;
+}
+
+.join-network-image p {
+    text-align: left;
+    font-size: 30px;
+    vertical-align: 5%;
+    color: white;
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    /* color: black; */
+}
+
+.right-leaning {
+    width: 40%;
+    height: auto;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+#exp {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.video-benefits iframe{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Join Our Network END
+--------------------------------- */
+
+
+/* FAQ
+--------------------------------- */
+
+#title {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+#border {
+    border-bottom-style: solid;
+    border-color: whitesmoke;
+    margin: 30px;
+}
+
+.question {
+    border-left-style: solid;
+    border-left-width: thick;
+    border-color: #19647E;
+    background-color: whitesmoke
+}
+
+.answer{
+    border-left-style: solid;
+    border-left-width: thick;
+    border-color: gray;
+    background-color: white
+}
+
+p.q-letter{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    width: 0px;
+    margin-top: 15px;
+    padding-left: 10px;
+    color: #19647E;
+}
+
+p.a-letter{
+    display:inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    width: 0px;
+    margin-top: 15px;
+    margin-bottom: 60px;
+    padding-left: 10px;
+    color: gray;
+  }
+
+p {
+    display: inline-block;
+    width: 90%;
+    height: 0px;
+    padding: 5px;
+    padding-left: 40px;
+    color: gray;
+}
+
+h4 {
+    display: inline-block;
+    padding: 5px;
+    padding-left: 40px;
+}
+
+sup {
+    font-size: 9px;
+}
+
+/* FAQ END
+--------------------------------- */
+
+/* Contact Us Form
+--------------------------------- */
+
+/* it'll be conducive to change the container as a flex */
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #19647E;
+  }
+.container-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.card {
+    width:580px;
+    border-style: solid;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+    margin: 20px;
+    color: white;
+}
+
+.card p {
+    color: white;
+}
+
+#info {
+    width:580px;
+    border-style: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 20px;
+}
+#name {
+    width: 47%;
+}
+#email {
+    width: 47%;
+}
+#subject {
+    width: 100%;
+    margin-top: 20px;
+}
+#message {
+    width: 100%;
+    padding-bottom: 110px;
+    margin-top: 15px;
+}
+
+/* Contact Us Form END
+--------------------------------- */
+
+/* Contact Info
+--------------------------------- */
+
+.content-wrap footer {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+footer {
+    background: #003249;
+    color: #F7FFF7;
+    /* text-align: center; */
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;    
+}
+
+footer .content-wrap {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+footer h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.contact-list {
+    list-style-type: none; /* Remove the bullet points */
+    padding: 0;            /* Removes the default space */
+    display: flex;
+
+    /* Helps control the spacing of the list items which are now flex-items 
+    space-between - helps distribute flex-items evenly 
+    */
+    justify-content: center; 
+   
+}
+
+/* This selector is going to give space between each links */
+
+.contact-list a {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+
+    /* Due to links being inline elements and this will adjust 
+    the position vertically and horizontally when the padding
+    is added. Also, this gives extra click space which is 
+    also beneficial to smartphone usrs  */
+    display: inline-block;
+}
